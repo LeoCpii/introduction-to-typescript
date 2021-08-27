@@ -38,7 +38,7 @@ class Run {
     // INHERITANCE
     // new NewClass().log();
 
-    console.log(new SuperMario(3, 'pena').fly());
+    // console.log(new SuperMario(3, 'pena').fly());
   }
 }
 
