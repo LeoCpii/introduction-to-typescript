@@ -37,8 +37,13 @@ class Run {
     // new ClassType().log();
     // INHERITANCE
     // new NewClass().log();
-
-    // console.log(new SuperMario(3, 'pena').fly());
+    /************/
+    /* EXERCISE */
+    /************/
+    // const mario = new SuperMario(3, 'capa');
+    // const luigi = new SuperMario(1, 'pena');
+    // console.log('mario', mario.fly());
+    // console.log('Luigi', luigi.fly());
   }
 }
 

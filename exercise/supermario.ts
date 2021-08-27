@@ -8,7 +8,7 @@ interface IMario {
   lifes: number;
 }
 
-type TItem = 'pena' | 'capa' | 'flor';
+type TItem = 'pena' | 'capa';
 
 abstract class Moves {
   private item: TItem;
@@ -17,16 +17,24 @@ abstract class Moves {
     this.item = item;
   }
 
-  abstract jump(): void;
-  abstract down(): void;
-  abstract right(): void;
-  abstract left(): void;
+  public jump(): void {
+    console.log('Pulei');
+  }
+  public down(): void {
+    console.log('Abaixei');
+  }
+  public right(): void {
+    console.log('Andei');
+  }
+  public left(): void {
+    console.log('Voltei');
+  }
 
-  public fly() {
-    if (this.item !== 'pena') {
-      console.error('Você precisa de uma pena para voar');
+  public fly(): void {
+    if (!['pena', 'capa'].includes(this.item)) {
+      console.error('Você precisa de uma pena ou uma capa para voar');
     } else {
-      console.log('Estou voando! 🪁');
+      console.log(`Estou voando com uma ${this.item}!`);
     }
   }
 }
@@ -53,21 +61,5 @@ export class SuperMario extends Moves implements IMario {
   }
   set lifes(value: number) {
     this._lifes = value;
-  }
-
-  public jump() {
-    console.log('Pulei');
-  }
-  public down() {
-    console.log('Abaixei');
-  }
-  public right() {
-    console.log('Andei');
-  }
-  public left() {
-    console.log('Voltei');
-  }
-  public fly() {
-    super.fly();
   }
 }
