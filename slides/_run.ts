@@ -2,9 +2,9 @@ import ArrayType from './array';
 import EnumType from './enum';
 import TypeType from './type';
 import { NewClass, ClassType } from './class';
-import { Pokemon } from './../exercise/pokemon';
+import { Pokemon } from './../example/pokemon';
 import { IPokemon } from './interface';
-import { SuperMario } from '../exercise/supermario';
+import { SuperMario } from '../example/supermario';
 
 class Run {
   constructor() {
